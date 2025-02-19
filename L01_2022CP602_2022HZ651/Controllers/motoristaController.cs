@@ -92,7 +92,7 @@ namespace L01_2022CP602_2022HZ651.Controllers
             return Ok(motoristaModificar);
         }
 
-        // EndPoint que elimina los datos del motorista 
+        
         [HttpDelete]
         [Route("eliminar/{id}")]
         public IActionResult EliminarEquipo(int id)
