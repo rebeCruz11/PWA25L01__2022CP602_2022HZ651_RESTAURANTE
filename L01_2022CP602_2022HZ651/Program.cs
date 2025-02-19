@@ -11,6 +11,14 @@ builder.Services.AddDbContext<RestauranteContext>(options =>
             builder.Configuration.GetConnectionString("RestauranteDbConnection")
         )
 );
+
+//Inyeccion nueva
+builder.Services.AddDbContext<RestauranteContext>(options =>
+        options.UseSqlServer(
+            builder.Configuration.GetConnectionString("RestauranteCarolina")
+        )
+);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
