@@ -54,7 +54,7 @@ namespace L01_2022CP602_2022HZ651.Controllers
             return Ok(motorista);
         }
 
-        // EndPoint que retorna los registros de una tabla filtrados por el nombre
+        // EndPoint que agrega nuevos motorista a la tabla
 
         [HttpPost]
         [Route("Add")]
@@ -72,7 +72,7 @@ namespace L01_2022CP602_2022HZ651.Controllers
             }
         }
 
-
+        // EndPoint que actualiza los datos del motorista 
         [HttpPut]
         [Route("actualizar/{id}")]
         public IActionResult ActualizarMotorista(int id, [FromBody] motoristas motoristaModificar)
@@ -92,7 +92,7 @@ namespace L01_2022CP602_2022HZ651.Controllers
             return Ok(motoristaModificar);
         }
 
-
+        // EndPoint que elimina los datos del motorista 
         [HttpDelete]
         [Route("eliminar/{id}")]
         public IActionResult EliminarEquipo(int id)
